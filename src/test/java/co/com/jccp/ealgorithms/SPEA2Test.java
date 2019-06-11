@@ -1,9 +1,7 @@
 package co.com.jccp.ealgorithms;
 
-import co.com.jccp.ealgorithms.algorithm.NSGAII;
 import co.com.jccp.ealgorithms.algorithm.SPEA2;
-import co.com.jccp.ealgorithms.function.SCH;
-import co.com.jccp.ealgorithms.function.ZDT2;
+import co.com.jccp.ealgorithms.function.*;
 import co.com.jccp.ealgorithms.gop.PolynomialMutation;
 import co.com.jccp.ealgorithms.gop.SimulatedBinaryXover;
 import co.com.jccp.ealgorithms.graphs.MatlabChart;

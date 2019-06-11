@@ -1,7 +1,6 @@
 package co.com.jccp.ealgorithms;
 
 import co.com.jccp.ealgorithms.algorithm.MOHAEA1;
-import co.com.jccp.ealgorithms.algorithm.NSGAII;
 import co.com.jccp.ealgorithms.function.*;
 import co.com.jccp.ealgorithms.gop.GeneticOperator;
 import co.com.jccp.ealgorithms.gop.PolynomialMutation;
