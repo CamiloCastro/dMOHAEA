@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by: Juan Camilo Castro Pinto
  **/
-public class MOHAEA1<T> {
+public class NSHAEA<T> {
 
     private PopulationInitialization<T> popInit;
     private ObjectiveFunction<T> function;
@@ -28,7 +28,7 @@ public class MOHAEA1<T> {
     private List<GeneticOperator<T>> operators;
     private CloneUtils<T> cloneUtils;
 
-    public MOHAEA1(PopulationInitialization<T> popInit, ObjectiveFunction<T> function, boolean minimize, int dimensions, int popSize, int iterations, List<GeneticOperator<T>> operators, CloneUtils<T> cloneUtils) {
+    public NSHAEA(PopulationInitialization<T> popInit, ObjectiveFunction<T> function, boolean minimize, int dimensions, int popSize, int iterations, List<GeneticOperator<T>> operators, CloneUtils<T> cloneUtils) {
         this.popInit = popInit;
         this.function = function;
         this.minimize = minimize;

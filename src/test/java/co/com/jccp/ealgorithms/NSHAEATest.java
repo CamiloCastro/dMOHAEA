@@ -1,6 +1,6 @@
 package co.com.jccp.ealgorithms;
 
-import co.com.jccp.ealgorithms.algorithm.MOHAEA1;
+import co.com.jccp.ealgorithms.algorithm.NSHAEA;
 import co.com.jccp.ealgorithms.function.*;
 import co.com.jccp.ealgorithms.gop.GeneticOperator;
 import co.com.jccp.ealgorithms.gop.PolynomialMutation;
@@ -19,37 +19,37 @@ import java.util.List;
 /**
  * Created by: Juan Camilo Castro Pinto
  **/
-public class MOHAEA1Test {
+public class NSHAEATest {
 
     @Test
-    public void mohaea1Test()
+    public void nshaeTest()
     {
 
 //        SCH function = new SCH();
 //        int dimensions = 1;
 //        double[][] limits = new double[][]{{-1000, 1000}};
-//        String fileName = "MOHAEA1-SCH";
+//        String fileName = "NSHAEA-SCH";
 //        double[] xlim = new double[]{0, 4};
 //        double[] ylim = new double[]{0, 4};
 
 //        FON function = new FON();
 //        int dimensions = 3;
 //        double[][] limits = new double[][]{{-4, 4}, {-4, 4}, {-4, 4}};
-//        String fileName = "MOHAEA1-FON";
+//        String fileName = "NSHAEA-FON";
 //        double[] xlim = new double[]{0, 1};
 //        double[] ylim = new double[]{0, 1};
 
         POL function = new POL();
         int dimensions = 2;
         double[][] limits =  new double[][]{{-Math.PI, Math.PI}, {-Math.PI, Math.PI}};
-        String fileName = "MOHAEA1-POL";
+        String fileName = "NSHAEA-POL";
         double[] xlim = new double[]{1, 17};
         double[] ylim = new double[]{0, 29};
 
 //        KUR function = new KUR();
 //        int dimensions = 3;
 //        double[][] limits =  new double[][]{{-5, 5}, {-5, 5}, {-5, 5}};
-//        String fileName = "MOHAEA1-KUR";
+//        String fileName = "NSHAEA-KUR";
 //        double[] xlim = new double[]{-21, -14};
 //        double[] ylim = new double[]{-12, 1};
 
@@ -61,7 +61,7 @@ public class MOHAEA1Test {
 //            limits[i][0] = 0.0;
 //            limits[i][1] = 1.0;
 //        }
-//        String fileName = "MOHAEA1-ZDT1";
+//        String fileName = "NSHAEA-ZDT1";
 //        double[] xlim = new double[]{0, 1};
 //        double[] ylim = new double[]{0, 1};
 
@@ -73,7 +73,7 @@ public class MOHAEA1Test {
 //            limits[i][0] = 0.0;
 //            limits[i][1] = 1.0;
 //        }
-//        String fileName = "MOHAEA1-ZDT2";
+//        String fileName = "NSHAEA-ZDT2";
 //        double[] xlim = new double[]{0, 1};
 //        double[] ylim = new double[]{0, 1};
 
@@ -96,9 +96,9 @@ public class MOHAEA1Test {
 
         RealCloneUtil rcu = new RealCloneUtil();
 
-        MOHAEA1<double[]> mohaea1 = new MOHAEA1<>(init, function, minimize, dimensions, popSize, iterations, operators, rcu);
+        NSHAEA<double[]> NSHAEA = new NSHAEA<>(init, function, minimize, dimensions, popSize, iterations, operators, rcu);
 
-        List<MOEAIndividual<double[]>> answer = mohaea1.apply();
+        List<MOEAIndividual<double[]>> answer = NSHAEA.apply();
 
         double[] x = new double[answer.size()];
         double[] y = new double[answer.size()];
@@ -135,7 +135,7 @@ public class MOHAEA1Test {
         fig.grid("on","on");                 // grid on;
         fig.legend("northeast");             // legend('AAPL','BAC','Location','northeast')
         fig.font("Helvetica",15);            // .. 'FontName','Helvetica','FontSize',15
-        fig.saveasSVG("MOHAEA1/" + fileName + ".svg",640,640);   // saveas(gcf,'MyPlot','jpeg');
+        fig.saveasSVG("NSHAEA/" + fileName + ".svg",640,640);   // saveas(gcf,'MyPlot','jpeg');
 
 
 
